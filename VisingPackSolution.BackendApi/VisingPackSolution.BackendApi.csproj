@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>62ee99f7-6a57-454a-a4a2-cdeb915816e6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VisingPackSolution.Application\VisingPackSolution.Application.csproj" />
+    <ProjectReference Include="..\VisingPackSolution.Data.Speed\VisingPackSolution.Data.Speed.csproj" />
+    <ProjectReference Include="..\VisingPackSolution.Data\VisingPackSolution.Data.csproj" />
+    <ProjectReference Include="..\VisingPackSolution.ViewModles\VisingPackSolution.ViewModels.csproj" />
+    <ProjectReference Include="..\VisingPackSolutions.Utilities\VisingPackSolution.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\user-content\" />
+  </ItemGroup>
+
+</Project>

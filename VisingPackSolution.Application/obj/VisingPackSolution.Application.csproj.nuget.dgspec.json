@@ -1,0 +1,390 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Application\\VisingPackSolution.Application.csproj": {}
+  },
+  "projects": {
+    "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Application\\VisingPackSolution.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Application\\VisingPackSolution.Application.csproj",
+        "projectName": "VisingPackSolution.Application",
+        "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Application\\VisingPackSolution.Application.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data.Speed\\VisingPackSolution.Data.Speed.csproj": {
+                "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data.Speed\\VisingPackSolution.Data.Speed.csproj"
+              },
+              "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data\\VisingPackSolution.Data.csproj": {
+                "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data\\VisingPackSolution.Data.csproj"
+              },
+              "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj": {
+                "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj"
+              },
+              "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj": {
+                "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data.Speed\\VisingPackSolution.Data.Speed.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data.Speed\\VisingPackSolution.Data.Speed.csproj",
+        "projectName": "VisingPackSolution.Data.Speed",
+        "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data.Speed\\VisingPackSolution.Data.Speed.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data.Speed\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data\\VisingPackSolution.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data\\VisingPackSolution.Data.csproj",
+        "projectName": "VisingPackSolution.Data",
+        "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data\\VisingPackSolution.Data.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj",
+        "projectName": "VisingPackSolution.ViewModels",
+        "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.ViewModles\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
+        "projectName": "VisingPackSolution.Utilities",
+        "projectPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolutions.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

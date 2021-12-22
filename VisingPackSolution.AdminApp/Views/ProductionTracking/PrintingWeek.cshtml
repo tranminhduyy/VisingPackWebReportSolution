@@ -1,0 +1,114 @@
+﻿@model VisingPackSolution.ViewModels.ProductionTracking.PtPrintingWeekVM
+@{ ViewData["Title"] = "Production Tracking";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Production Tracking</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-controller="PtPrinting" asp-action="GetDataWeek" method="post" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="button" onclick="window.location.href='/PtPrinting/GetData1H'" class="btn btn-dark" style="width: 110px">1 Hour</button>
+                    <button type="button" onclick="window.location.href='/PtPrinting/GetDataDay'" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="button" onclick="window.location.href='/PtPrinting/GetDataWeek'" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="button" onclick="window.location.href='/PtPrinting/GetDataMonth'" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="button" onclick="window.location.href='/PtPrinting/GetDataYear'" class="btn btn-dark" style="width: 110px">Year</button>
+                    <button type="button" onclick="window.location.href='/PtPrinting/ExportExcelWeek'" class="btn btn-success" style="width: 110px">Export</button>
+                    <button type="button" onclick="window.location.href='/PtPrinting/ExportExcelAll'" class="btn btn-warning" style="width: 110px">Export All</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label style="margin-top: 6px">Select a date</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="date" name="selectedDate" value="@ViewBag.SelectedDate.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" value="Find" name="Selected" class="btn btn-primary">Find</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="card shadow border-left-danger mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Statistics</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_desc text-danger" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Statistic: activate to sort column ascending" style="width: auto;" aria-sort="descending">Avaibility (h)</th>
+                                        <th class="sorting text-primary" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P601</th>
+                                        <th class="sorting text-success" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P604</th>
+                                        <th class="sorting text-info" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P605</th>
+                                        <th class="sorting text-warning" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P5M</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Testing time</td>
+                                        <td>@Model.P601PTWeek.TestingTimeAndPercent</td>
+                                        <td>@Model.P604PTWeek.TestingTimeAndPercent</td>
+                                        <td>@Model.P605PTWeek.TestingTimeAndPercent</td>
+                                        <td>@Model.P5mPTWeek.TestingTimeAndPercent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Running time</td>
+                                        <td>@Model.P601PTWeek.RunningTimeAndPercent</td>
+                                        <td>@Model.P604PTWeek.RunningTimeAndPercent</td>
+                                        <td>@Model.P605PTWeek.RunningTimeAndPercent</td>
+                                        <td>@Model.P5mPTWeek.RunningTimeAndPercent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Not Running Time</td>
+                                        <td>@Model.P601PTWeek.NotRunningTimeAndPercent</td>
+                                        <td>@Model.P604PTWeek.NotRunningTimeAndPercent</td>
+                                        <td>@Model.P605PTWeek.NotRunningTimeAndPercent</td>
+                                        <td>@Model.P5mPTWeek.NotRunningTimeAndPercent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>No. Product Code Change</td>
+                                        <td>@Model.P601PTWeek.ProductCodeChangeCount</td>
+                                        <td>@Model.P604PTWeek.ProductCodeChangeCount</td>
+                                        <td>@Model.P605PTWeek.ProductCodeChangeCount</td>
+                                        <td>@Model.P5mPTWeek.ProductCodeChangeCount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantiy (pcs)</td>
+                                        <td>@Model.P601PTWeek.Quantity</td>
+                                        <td>@Model.P604PTWeek.Quantity</td>
+                                        <td>@Model.P605PTWeek.Quantity</td>
+                                        <td>@Model.P5mPTWeek.Quantity</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Defect (pcs)</td>
+                                        <td>@Model.P601PTWeek.Waste</td>
+                                        <td>@Model.P604PTWeek.Waste</td>
+                                        <td>@Model.P605PTWeek.Waste</td>
+                                        <td>@Model.P5mPTWeek.Waste</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

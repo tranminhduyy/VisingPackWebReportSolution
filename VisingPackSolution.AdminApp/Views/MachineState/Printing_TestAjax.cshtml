@@ -1,0 +1,94 @@
+﻿@model VisingPackSolution.ViewModels.MachineState.MsPrintingVM
+@{ ViewData["Title"] = "Printing";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+
+@*<div class="container-fluid">
+    <div class="row">
+        <div class="col-5">
+            <h1 class="mt-4">Machine State</h1>
+        </div>
+        <div class="col-2">
+            <img id="myLoadingElement" src="/photos/image/loading.gif" style="width:70px;height:70px; margin-left:auto; margin-right:auto; display:none" />
+        </div>
+    </div>
+
+
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-action="Index" method="get" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataLastHour'" class="btn btn-dark" style="width: 110px">1 Hour</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataDay'" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataWeek'" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataMonth'" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="button" class="btn btn-dark" id="btSearch" style="width: 110px">Year</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="margin-top: 6px">From</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input id="dpFrom" type="date" value="@ViewBag.From.ToString("yyyy-MM-dd")" name="From" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="margin-top: 6px">To</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" value="@ViewBag.To.ToString("yyyy-MM-dd")" name="To" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" class="btn btn-primary">Find</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/Index'" class="btn btn-dark">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="partial">
+        @Html.Partial("_MsPrinting")
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $("#btSearch").click(function () {
+        $("#myLoadingElement").show();
+        var d = new Date(new Date());
+
+        $.ajax({
+            url: "/MsPrinting/GetDataYear",
+            type: "GET",
+            success: function (data) {
+                $("#partial").load("/MsPrinting/GetDataYear", onload);
+                $("#myLoadingElement").hide();
+                document.getElementById("dpFrom").value = d.getFullYear() + '-01-01';
+            },
+            error: function (emp) {
+                alert('Error');
+            }
+        });
+    });
+</script>*@
+
+
+
+
+

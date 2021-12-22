@@ -1,0 +1,144 @@
+﻿@model VisingPackSolution.ViewModels.ProductionTracking.PtDieCutMonthYearVM
+@{ ViewData["Title"] = "Production Tracking";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Production Tracking</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-controller="PtDieCut" asp-action="GetDataMonth" method="post" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetData1H'" class="btn btn-dark" style="width: 110px">1 Hour</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataDay'" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataWeek'" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataMonth'" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataYear'" class="btn btn-dark" style="width: 110px">Year</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/ExportExcelMonthYear'" class="btn btn-success" style="width: 110px">Export</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/ExportExcelAll'" class="btn btn-warning" style="width: 110px">Export All</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label style="margin-top: 6px">Select a date</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="date" name="selectedDate" value="@ViewBag.SelectedDate.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" value="Find" name="Selected" class="btn btn-primary">Find</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="card shadow border-left-danger mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Statistics</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_desc text-danger" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Statistic: activate to sort column ascending" style="width: auto;" aria-sort="descending">Statistics</th>
+                                        <th class="sorting text-primary" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">Calculation</th>
+                                        <th class="sorting text-primary" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD2</th>
+                                        <th class="sorting text-success" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD3</th>
+                                        <th class="sorting text-info" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD4</th>
+                                        <th class="sorting text-warning" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD5</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Actual working time (h) [a]</td>
+                                        <td></td>
+                                        <td>@Model.Btd2PTMonthYear.ActualWorkingTime</td>
+                                        <td>@Model.Btd3PTMonthYear.ActualWorkingTime</td>
+                                        <td>@Model.Btd4PTMonthYear.ActualWorkingTime</td>
+                                        <td>@Model.Btd5PTMonthYear.ActualWorkingTime</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Downtime (h) [b]</td>
+                                        <td></td>
+                                        <td>@Model.Btd2PTMonthYear.Downtime</td>
+                                        <td>@Model.Btd3PTMonthYear.Downtime</td>
+                                        <td>@Model.Btd4PTMonthYear.Downtime</td>
+                                        <td>@Model.Btd5PTMonthYear.Downtime</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Quantity (pcs) [c]</td>
+                                        <td></td>
+                                        <td>@Model.Btd2PTMonthYear.TotalOutput</td>
+                                        <td>@Model.Btd3PTMonthYear.TotalOutput</td>
+                                        <td>@Model.Btd4PTMonthYear.TotalOutput</td>
+                                        <td>@Model.Btd5PTMonthYear.TotalOutput</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maximum production capacity (pcs) [d]</td>
+                                        <td></td>
+                                        <td>@Model.Btd2PTMonthYear.MaximumProductionCapacity</td>
+                                        <td>@Model.Btd3PTMonthYear.MaximumProductionCapacity</td>
+                                        <td>@Model.Btd4PTMonthYear.MaximumProductionCapacity</td>
+                                        <td>@Model.Btd5PTMonthYear.MaximumProductionCapacity</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Defect (pcs) [e]</td>
+                                        <td></td>
+                                        <td>@Model.Btd2PTMonthYear.Waste</td>
+                                        <td>@Model.Btd3PTMonthYear.Waste</td>
+                                        <td>@Model.Btd4PTMonthYear.Waste</td>
+                                        <td>@Model.Btd5PTMonthYear.Waste</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avaibility/Uptime [f]</td>
+                                        <td>(a-b)/a*100%</td>
+                                        <td>@ViewBag.btd2_AvaiUptime</td>
+                                        <td>@ViewBag.btd3_AvaiUptime</td>
+                                        <td>@ViewBag.btd4_AvaiUptime</td>
+                                        <td>@ViewBag.btd5_AvaiUptime</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Capacity utilization [g]</td>
+                                        <td>c/d*100%</td>
+                                        <td>@ViewBag.btd2_CapaUtilication</td>
+                                        <td>@ViewBag.btd3_CapaUtilication</td>
+                                        <td>@ViewBag.btd4_CapaUtilication</td>
+                                        <td>@ViewBag.btd5_CapaUtilication</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Production yield [h]</td>
+                                        <td>(c-e)/c*100%</td>
+                                        <td>@ViewBag.btd2_ProYield</td>
+                                        <td>@ViewBag.btd3_ProYield</td>
+                                        <td>@ViewBag.btd4_ProYield</td>
+                                        <td>@ViewBag.btd5_ProYield</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OEE</td>
+                                        <td>f*g*h*100%</td>
+                                        <td>@ViewBag.btd2_OEE</td>
+                                        <td>@ViewBag.btd3_OEE</td>
+                                        <td>@ViewBag.btd4_OEE</td>
+                                        <td>@ViewBag.btd5_OEE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

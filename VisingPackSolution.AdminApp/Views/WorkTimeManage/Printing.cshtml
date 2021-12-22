@@ -1,0 +1,513 @@
+﻿@model VisingPackSolution.ViewModels.WorkTimeManage.WtPrintingVM
+@{ ViewData["Title"] = "Ope. Time Management";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+
+<div class="container-fluid">
+    <h1 class="mt-4">Ope. Time Management</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-controller="WtPrinting" asp-action="GetData" method="post" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="submit" value="Week" name="Selected" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="submit" value="Month" name="Selected" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="submit" value="3Month" name="Selected" class="btn btn-dark" style="width: 110px">3 Months</button>
+                    <button type="submit" value="6Month" name="Selected" class="btn btn-dark" style="width: 110px">6 Months</button>
+                    <button type="submit" value="Year" name="Selected" class="btn btn-dark" style="width: 110px">Year</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="margin-top: 6px">From</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="From" value="@ViewBag.From.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="margin-top: 6px">To</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="To" value="@ViewBag.To.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" value="Find" name="Selected" class="btn btn-primary">Find</button>
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Printing 601 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.P601RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: @ViewBag.P601RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Printing 604 (Factory 1)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.P604RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: @ViewBag.P604RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Printing 605 (Factory 1)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.P605RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: @ViewBag.P605RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Printing 5M (Factory 1)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.P5MRunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: @ViewBag.P5MRunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-primary py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">P601</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcP601" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-success py-3">
+                    <h6 class="m-0 font-weight-bold text-success">P604</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcP604" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-info py-3">
+                    <h6 class="m-0 font-weight-bold text-info">P605</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcP605" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-warning py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">P5M</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcP5M" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow border-left-danger mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Machine Ope. Time</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">           
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_desc text-danger" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Avaibility: activate to sort column ascending" style="width: auto;" aria-sort="descending">Avaibility (h)</th>
+                                        <th class="sorting text-primary" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P601</th>
+                                        <th class="sorting text-success" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P604</th>
+                                        <th class="sorting text-info" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P605</th>
+                                        <th class="sorting text-warning" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">P5M</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Running time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.RunningTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Testing time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.TestingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.OtherTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Break time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.BreakTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fixing time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.FixingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pending time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.PendingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.MaintenanceTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pause time</td>
+                                        <td>@Convert.ToDecimal(Model.P601.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P604.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P605.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.P5M.PauseTime)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+window.onload = function () {
+        //P601
+        var p601sum = @Html.Raw(Model.P601.RunningTime) +
+              @Html.Raw(Model.P601.TestingTime) +
+              @Html.Raw(Model.P601.OtherTime) +
+              @Html.Raw(Model.P601.BreakTime) +
+              @Html.Raw(Model.P601.FixingTime) +
+              @Html.Raw(Model.P601.PendingTime) +
+              @Html.Raw(Model.P601.MaintenanceTime) +
+              @Html.Raw(Model.P601.PauseTime);
+    var p601running = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.RunningTime) * (100 / p601sum));
+    var p601testing = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.TestingTime) * (100 / p601sum));
+    var p601other = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.OtherTime) * (100 / p601sum));
+    var p601breaktime = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.BreakTime) * (100 / p601sum));
+    var p601fixing = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.FixingTime) * (100 / p601sum));
+    var p601pending = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.PendingTime) * (100 / p601sum));
+    var p601maintenance = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.MaintenanceTime) * (100 / p601sum));
+    var p601pause = (p601sum == 0) ? 0 : Math.round(@Html.Raw(Model.P601.PauseTime) * (100 / p601sum));
+
+        var chartP601 = new CanvasJS.Chart("pcP601", {
+            theme: "light2",
+            exportEnabled: true,
+            animationEnabled: true,
+            legend: {
+                cursor: "pointer",
+                itemclick: explodePie
+            },
+            data: [{
+                type: "pie",
+                showInLegend: true,
+                indexLabelFontSize: 12,
+                radius: 80,
+                indexLabel: "{name} - {y}",
+                yValueFormatString: "###0\"%\"",
+                dataPoints: [
+                    { y: p601running, name: "Running" },
+                    { y: p601testing, name: "Testing" },
+                    { y: p601other, name: "Other" },
+                    { y: p601breaktime, name: "Break" },
+                    { y: p601fixing, name: "Fixing" },
+                    { y: p601pending, name: "Pending" },
+                    { y: p601maintenance, name: "Maintenance" },
+                    { y: p601pause, name: "Pause" }
+                ]
+            }]
+        });
+        chartP601.render();
+
+        //P604
+        var p604sum = @Html.Raw(Model.P604.RunningTime) +
+              @Html.Raw(Model.P604.TestingTime) +
+              @Html.Raw(Model.P604.OtherTime) +
+              @Html.Raw(Model.P604.BreakTime) +
+              @Html.Raw(Model.P604.FixingTime) +
+              @Html.Raw(Model.P604.PendingTime) +
+              @Html.Raw(Model.P604.MaintenanceTime) +
+              @Html.Raw(Model.P604.PauseTime);
+    var p604running = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.RunningTime) * (100 / p604sum));
+    var p604testing = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.TestingTime) * (100 / p604sum));
+    var p604other = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.OtherTime) * (100 / p604sum));
+    var p604breaktime = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.BreakTime) * (100 / p604sum));
+    var p604fixing = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.FixingTime) * (100 / p604sum));
+    var p604pending = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.PendingTime) * (100 / p604sum));
+    var p604maintenance = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.MaintenanceTime) * (100 / p604sum));
+    var p604pause = (p604sum == 0) ? 0 : Math.round(@Html.Raw(Model.P604.PauseTime) * (100 / p604sum));
+
+        var chartP604 = new CanvasJS.Chart("pcP604", {
+            theme: "light2",
+            exportEnabled: true,
+            animationEnabled: true,
+            legend: {
+                cursor: "pointer",
+                itemclick: explodePie
+            },
+            data: [{
+                type: "pie",
+                showInLegend: true,
+                indexLabelFontSize: 12,
+                radius: 80,
+                indexLabel: "{name} - {y}",
+                yValueFormatString: "###0\"%\"",
+                dataPoints: [
+                    { y: p604running, name: "Running" },
+                    { y: p604testing, name: "Testing" },
+                    { y: p604other, name: "Other" },
+                    { y: p604breaktime, name: "Break" },
+                    { y: p604fixing, name: "Fixing" },
+                    { y: p604pending, name: "Pending" },
+                    { y: p604maintenance, name: "Maintenance" },
+                    { y: p604pause, name: "Pause" }
+                ]
+            }]
+        });
+        chartP604.render();
+
+        //P605
+        var p605sum = @Html.Raw(Model.P605.RunningTime) +
+              @Html.Raw(Model.P605.TestingTime) +
+              @Html.Raw(Model.P605.OtherTime) +
+              @Html.Raw(Model.P605.BreakTime) +
+              @Html.Raw(Model.P605.FixingTime) +
+              @Html.Raw(Model.P605.PendingTime) +
+              @Html.Raw(Model.P605.MaintenanceTime) +
+              @Html.Raw(Model.P605.PauseTime);
+    var p605running = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.RunningTime) * (100 / p605sum));
+    var p605testing = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.TestingTime) * (100 / p605sum));
+    var p605other = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.OtherTime) * (100 / p605sum));
+    var p605breaktime = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.BreakTime) * (100 / p605sum));
+    var p605fixing = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.FixingTime) * (100 / p605sum));
+    var p605pending = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.PendingTime) * (100 / p605sum));
+    var p605maintenance = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.MaintenanceTime) * (100 / p605sum));
+    var p605pause = (p605sum == 0) ? 0 : Math.round(@Html.Raw(Model.P605.PauseTime) * (100 / p605sum));
+
+        var chartP605 = new CanvasJS.Chart("pcP605", {
+            theme: "light2",
+            exportEnabled: true,
+            animationEnabled: true,
+            legend: {
+                cursor: "pointer",
+                itemclick: explodePie
+            },
+            data: [{
+                type: "pie",
+                showInLegend: true,
+                indexLabelFontSize: 12,
+                radius: 80,
+                indexLabel: "{name} - {y}",
+                yValueFormatString: "###0\"%\"",
+                dataPoints: [
+                    { y: p605running, name: "Running" },
+                    { y: p605testing, name: "Testing" },
+                    { y: p605other, name: "Other" },
+                    { y: p605breaktime, name: "Break" },
+                    { y: p605fixing, name: "Fixing" },
+                    { y: p605pending, name: "Pending" },
+                    { y: p605maintenance, name: "Maintenance" },
+                    { y: p605pause, name: "Pause" }
+                ]
+            }]
+        });
+        chartP605.render();
+
+
+
+        //P5M
+    var p5Msum = @Html.Raw(Model.P5M.RunningTime) +
+              @Html.Raw(Model.P5M.TestingTime) +
+              @Html.Raw(Model.P5M.OtherTime) +
+              @Html.Raw(Model.P5M.BreakTime) +
+              @Html.Raw(Model.P5M.FixingTime) +
+              @Html.Raw(Model.P5M.PendingTime) +
+              @Html.Raw(Model.P5M.MaintenanceTime) +
+              @Html.Raw(Model.P5M.PauseTime);
+    var p5Mrunning = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.RunningTime) * (100 / p5Msum));
+    var p5Mtesting = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.TestingTime) * (100 / p5Msum));
+    var p5Mother = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.OtherTime) * (100 / p5Msum));
+    var p5Mbreaktime = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.BreakTime) * (100 / p5Msum));
+    var p5Mfixing = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.FixingTime) * (100 / p5Msum));
+    var p5Mpending = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.PendingTime) * (100 / p5Msum));
+    var p5Mmaintenance = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.MaintenanceTime) * (100 / p5Msum));
+    var p5Mpause = (p5Msum == 0) ? 0 : Math.round(@Html.Raw(Model.P5M.PauseTime) * (100 / p5Msum));
+
+        var chartP5M = new CanvasJS.Chart("pcP5M", {
+            theme: "light2",
+            exportEnabled: true,
+            animationEnabled: true,
+            legend: {
+                cursor: "pointer",
+                itemclick: explodePie
+            },
+            data: [{
+                type: "pie",
+                showInLegend: true,
+                indexLabelFontSize: 12,
+                radius: 80,
+                indexLabel: "{name} - {y}",
+                yValueFormatString: "###0\"%\"",
+                dataPoints: [
+                    { y: p5Mrunning, name: "Running" },
+                    { y: p5Mtesting, name: "Testing" },
+                    { y: p5Mother, name: "Other" },
+                    { y: p5Mbreaktime, name: "Break" },
+                    { y: p5Mfixing, name: "Fixing" },
+                    { y: p5Mpending, name: "Pending" },
+                    { y: p5Mmaintenance, name: "Maintenance" },
+                    { y: p5Mpause, name: "Pause" }
+                ]
+            }]
+        });
+        chartP5M.render();
+
+        function explodePie(e) {
+            if (typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+            } else {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+            }
+            e.chart.render();
+
+        }
+    }
+</script>
+
+
+
+

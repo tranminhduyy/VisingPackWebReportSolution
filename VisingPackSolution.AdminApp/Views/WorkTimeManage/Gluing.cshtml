@@ -1,0 +1,486 @@
+﻿@model VisingPackSolution.ViewModels.WorkTimeManage.WtGluingVM
+@{ ViewData["Title"] = "Ope. Time Management";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Ope. Time Management</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-controller="WtGluing" asp-action="GetData" method="post" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="submit" value="Week" name="Selected" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="submit" value="Month" name="Selected" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="submit" value="3Month" name="Selected" class="btn btn-dark" style="width: 110px">3 Months</button>
+                    <button type="submit" value="6Month" name="Selected" class="btn btn-dark" style="width: 110px">6 Months</button>
+                    <button type="submit" value="Year" name="Selected" class="btn btn-dark" style="width: 110px">Year</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="margin-top: 6px">From</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="From" value="@ViewBag.From.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="margin-top: 6px">To</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="To" value="@ViewBag.To.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" value="Find" name="Selected" class="btn btn-primary">Find</button>
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Gluing D650 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.D650RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: @ViewBag.D650RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Gluing D750 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.D750RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: @ViewBag.D750RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Gluing D1000 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.D1000RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: @ViewBag.D1000RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Gluing D1100 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.D1100RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: @ViewBag.D1100RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-primary py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">D650</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcD650" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-success py-3">
+                    <h6 class="m-0 font-weight-bold text-success">D750</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcD750" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-info py-3">
+                    <h6 class="m-0 font-weight-bold text-info">D1000</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcD1000" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-warning py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">D1100</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcD1100" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow border-left-danger mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Machine Ope. Time</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_desc text-danger" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Avaibility: activate to sort column ascending" style="width: auto;" aria-sort="descending">Avaibility (h)</th>
+                                        <th class="sorting text-primary" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">D650</th>
+                                        <th class="sorting text-success" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">D750</th>
+                                        <th class="sorting text-info" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">D1000</th>
+                                        <th class="sorting text-warning" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">D1100</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Running time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.RunningTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Testing time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.TestingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.OtherTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Break time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.BreakTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fixing time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.FixingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pending time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.PendingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.MaintenanceTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pause time</td>
+                                        <td>@Convert.ToDecimal(Model.D650.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D750.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1000.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.D1100.PauseTime)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+window.onload = function () {
+        //D650
+        var D650sum = @Html.Raw(Model.D650.RunningTime) +
+              @Html.Raw(Model.D650.TestingTime) +
+              @Html.Raw(Model.D650.OtherTime) +
+              @Html.Raw(Model.D650.BreakTime) +
+              @Html.Raw(Model.D650.FixingTime) +
+              @Html.Raw(Model.D650.PendingTime) +
+              @Html.Raw(Model.D650.MaintenanceTime) +
+              @Html.Raw(Model.D650.PauseTime);
+    var D650running = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.RunningTime) * (100 / D650sum));
+    var D650testing = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.TestingTime) * (100 / D650sum));
+    var D650other = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.OtherTime) * (100 / D650sum));
+    var D650breaktime = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.BreakTime) * (100 / D650sum));
+    var D650fixing = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.FixingTime) * (100 / D650sum));
+    var D650pending = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.PendingTime) * (100 / D650sum));
+    var D650maintenance = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.MaintenanceTime) * (100 / D650sum));
+    var D650pause = (D650sum == 0) ? 0 : Math.round(@Html.Raw(Model.D650.PauseTime) * (100 / D650sum));
+
+        var chartD650 = new CanvasJS.Chart("pcD650", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: D650running, label: "Running" },
+                    { y: D650testing, label: "Testing" },
+                    { y: D650other, label: "Other" },
+                    { y: D650breaktime, label: "Break" },
+                    { y: D650fixing, label: "Fixing" },
+                    { y: D650pending, label: "Pending" },
+                    { y: D650maintenance, label: "Maintenance" },
+                    { y: D650pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartD650.render();
+
+        //D750
+        var D750sum = @Html.Raw(Model.D750.RunningTime) +
+              @Html.Raw(Model.D750.TestingTime) +
+              @Html.Raw(Model.D750.OtherTime) +
+              @Html.Raw(Model.D750.BreakTime) +
+              @Html.Raw(Model.D750.FixingTime) +
+              @Html.Raw(Model.D750.PendingTime) +
+              @Html.Raw(Model.D750.MaintenanceTime) +
+              @Html.Raw(Model.D750.PauseTime);
+    var D750running = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.RunningTime) * (100 / D750sum));
+    var D750testing = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.TestingTime) * (100 / D750sum));
+    var D750other = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.OtherTime) * (100 / D750sum));
+    var D750breaktime = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.BreakTime) * (100 / D750sum));
+    var D750fixing = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.FixingTime) * (100 / D750sum));
+    var D750pending = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.PendingTime) * (100 / D750sum));
+    var D750maintenance = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.MaintenanceTime) * (100 / D750sum));
+    var D750pause = (D750sum == 0) ? 0 : Math.round(@Html.Raw(Model.D750.PauseTime) * (100 / D750sum));
+
+        var chartD750 = new CanvasJS.Chart("pcD750", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: D750running, label: "Running" },
+                    { y: D750testing, label: "Testing" },
+                    { y: D750other, label: "Other" },
+                    { y: D750breaktime, label: "Break" },
+                    { y: D750fixing, label: "Fixing" },
+                    { y: D750pending, label: "Pending" },
+                    { y: D750maintenance, label: "Maintenance" },
+                    { y: D750pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartD750.render();
+
+        //D1000
+        var D1000sum = @Html.Raw(Model.D1000.RunningTime) +
+              @Html.Raw(Model.D1000.TestingTime) +
+              @Html.Raw(Model.D1000.OtherTime) +
+              @Html.Raw(Model.D1000.BreakTime) +
+              @Html.Raw(Model.D1000.FixingTime) +
+              @Html.Raw(Model.D1000.PendingTime) +
+              @Html.Raw(Model.D1000.MaintenanceTime) +
+              @Html.Raw(Model.D1000.PauseTime);
+    var D1000running = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.RunningTime) * (100 / D1000sum));
+    var D1000testing = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.TestingTime) * (100 / D1000sum));
+    var D1000other = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.OtherTime) * (100 / D1000sum));
+    var D1000breaktime = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.BreakTime) * (100 / D1000sum));
+    var D1000fixing = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.FixingTime) * (100 / D1000sum));
+    var D1000pending = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.PendingTime) * (100 / D1000sum));
+    var D1000maintenance = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.MaintenanceTime) * (100 / D1000sum));
+    var D1000pause = (D1000sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1000.PauseTime) * (100 / D1000sum));
+
+        var chartD1000 = new CanvasJS.Chart("pcD1000", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: D1000running, label: "Running" },
+                    { y: D1000testing, label: "Testing" },
+                    { y: D1000other, label: "Other" },
+                    { y: D1000breaktime, label: "Break" },
+                    { y: D1000fixing, label: "Fixing" },
+                    { y: D1000pending, label: "Pending" },
+                    { y: D1000maintenance, label: "Maintenance" },
+                    { y: D1000pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartD1000.render();
+
+
+
+        //D1100
+    var D1100sum = @Html.Raw(Model.D1100.RunningTime) +
+              @Html.Raw(Model.D1100.TestingTime) +
+              @Html.Raw(Model.D1100.OtherTime) +
+              @Html.Raw(Model.D1100.BreakTime) +
+              @Html.Raw(Model.D1100.FixingTime) +
+              @Html.Raw(Model.D1100.PendingTime) +
+              @Html.Raw(Model.D1100.MaintenanceTime) +
+              @Html.Raw(Model.D1100.PauseTime);
+    var D1100running = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.RunningTime) * (100 / D1100sum));
+    var D1100testing = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.TestingTime) * (100 / D1100sum));
+    var D1100other = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.OtherTime) * (100 / D1100sum));
+    var D1100breaktime = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.BreakTime) * (100 / D1100sum));
+    var D1100fixing = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.FixingTime) * (100 / D1100sum));
+    var D1100pending = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.PendingTime) * (100 / D1100sum));
+    var D1100maintenance = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.MaintenanceTime) * (100 / D1100sum));
+    var D1100pause = (D1100sum == 0) ? 0 : Math.round(@Html.Raw(Model.D1100.PauseTime) * (100 / D1100sum));
+
+        var chartD1100 = new CanvasJS.Chart("pcD1100", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: D1100running, label: "Running" },
+                    { y: D1100testing, label: "Testing" },
+                    { y: D1100other, label: "Other" },
+                    { y: D1100breaktime, label: "Break" },
+                    { y: D1100fixing, label: "Fixing" },
+                    { y: D1100pending, label: "Pending" },
+                    { y: D1100maintenance, label: "Maintenance" },
+                    { y: D1100pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartD1100.render();
+
+        function explodePie(e) {
+            for (var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+                if (i !== e.dataPointIndex)
+                    e.dataSeries.dataPoints[i].exploded = false;
+            }
+        }
+    }</script>
+
+
+
+

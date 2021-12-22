@@ -1,0 +1,9 @@
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\bin\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.deps.json
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\bin\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.dll
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\bin\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.pdb
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\obj\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.csprojAssemblyReference.cache
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\obj\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.AssemblyInfoInputs.cache
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\obj\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.AssemblyInfo.cs
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\obj\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\obj\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.dll
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolutions.Utilities\obj\Debug\netcoreapp3.1\VisingPackSolutions.Utilities.pdb

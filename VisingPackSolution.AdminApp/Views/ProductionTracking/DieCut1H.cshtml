@@ -1,0 +1,237 @@
+﻿@model VisingPackSolution.ViewModels.ProductionTracking.PtDieCut1HVM
+@{ ViewData["Title"] = "Production Tracking";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Production Tracking</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-controller="PtDieCut" asp-action="GetData1H" method="post" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetData1H'" class="btn btn-dark" style="width: 110px">1 Hour</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataDay'" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataWeek'" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataMonth'" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/GetDataYear'" class="btn btn-dark" style="width: 110px">Year</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/ExportExcel1H'" class="btn btn-success" style="width: 110px">Export</button>
+                    <button type="button" onclick="window.location.href='/PtDieCut/ExportExcelAll'" class="btn btn-warning" style="width: 110px">Export All</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label style="margin-top: 6px">Select a date</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="datetime" name="selectedDate" value="@ViewBag.SelectedDate.ToString("yyyy-MM-dd hh:mm:ss tt")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" value="Find" name="Selected" class="btn btn-primary">Find</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-primary py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">BTD2</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 350px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Worksheet
+                                    </th>
+                                    <th>
+                                        ProductCode
+                                    </th>
+                                    <th>
+                                        Quantity
+                                    </th>
+                                    <th>
+                                        Target
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Btd2PT1H)
+                                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ws)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Job)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Target)
+                        </td>
+                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-success py-3">
+                    <h6 class="m-0 font-weight-bold text-success">BTD3</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 350px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Worksheet
+                                    </th>
+                                    <th>
+                                        ProductCode
+                                    </th>
+                                    <th>
+                                        Quantity
+                                    </th>
+                                    <th>
+                                        Target
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Btd3PT1H)
+                                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ws)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Job)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Target)
+                        </td>
+                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-info py-3">
+                    <h6 class="m-0 font-weight-bold text-info">BTD4</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 350px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Worksheet
+                                    </th>
+                                    <th>
+                                        ProductCode
+                                    </th>
+                                    <th>
+                                        Quantity
+                                    </th>
+                                    <th>
+                                        Target
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Btd4PT1H)
+                                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ws)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Job)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Target)
+                        </td>
+                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-warning py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">BTD5</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 350px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Worksheet
+                                    </th>
+                                    <th>
+                                        ProductCode
+                                    </th>
+                                    <th>
+                                        Quantity
+                                    </th>
+                                    <th>
+                                        Target
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Btd5PT1H)
+                                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ws)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Job)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Target)
+                        </td>
+                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

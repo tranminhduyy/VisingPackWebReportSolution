@@ -1,0 +1,393 @@
+﻿@model VisingPackSolution.ViewModels.WorkTimeManage.WtSclGmcVM
+@{ ViewData["Title"] = "Ope. Time Management";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Ope. Time Management</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-controller="WtSclGmc" asp-action="GetData" method="post" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="submit" value="Week" name="Selected" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="submit" value="Month" name="Selected" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="submit" value="3Month" name="Selected" class="btn btn-dark" style="width: 110px">3 Months</button>
+                    <button type="submit" value="6Month" name="Selected" class="btn btn-dark" style="width: 110px">6 Months</button>
+                    <button type="submit" value="Year" name="Selected" class="btn btn-dark" style="width: 110px">Year</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="margin-top: 6px">From</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="From" value="@ViewBag.From.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="margin-top: 6px">To</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="To" value="@ViewBag.To.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" value="Find" name="Selected" class="btn btn-primary">Find</button>
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                SCL (Factory 1)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.SCLRunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: @ViewBag.SCLRunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                GMC1 (Factory 1)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.GMC1RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: @ViewBag.GMC1RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                GMC2 (Factory 1)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.GMC2RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: @ViewBag.GMC2RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-primary py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">SCL</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcSCL" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-success py-3">
+                    <h6 class="m-0 font-weight-bold text-success">GMC1</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcGMC1" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-info py-3">
+                    <h6 class="m-0 font-weight-bold text-info">GMC2</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcGMC2" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow border-left-danger mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Machine Ope. Time</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_desc text-danger" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Avaibility: activate to sort column ascending" style="width: auto;" aria-sort="descending">Avaibility (h)</th>
+                                        <th class="sorting text-primary" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">SCL</th>
+                                        <th class="sorting text-success" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">GMC1</th>
+                                        <th class="sorting text-info" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">GMC2</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Running time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.RunningTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Testing time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.TestingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.OtherTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Break time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.BreakTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fixing time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.FixingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pending time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.PendingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.MaintenanceTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pause time</td>
+                                        <td>@Convert.ToDecimal(Model.SCL.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC1.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.GMC2.PauseTime)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+window.onload = function () {
+        //SCL
+        var SCLsum = @Html.Raw(Model.SCL.RunningTime) +
+              @Html.Raw(Model.SCL.TestingTime) +
+              @Html.Raw(Model.SCL.OtherTime) +
+              @Html.Raw(Model.SCL.BreakTime) +
+              @Html.Raw(Model.SCL.FixingTime) +
+              @Html.Raw(Model.SCL.PendingTime) +
+              @Html.Raw(Model.SCL.MaintenanceTime) +
+              @Html.Raw(Model.SCL.PauseTime);
+    var SCLrunning = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.RunningTime) * (100 / SCLsum));
+    var SCLtesting = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.TestingTime) * (100 / SCLsum));
+    var SCLother = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.OtherTime) * (100 / SCLsum));
+    var SCLbreaktime = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.BreakTime) * (100 / SCLsum));
+    var SCLfixing = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.FixingTime) * (100 / SCLsum));
+    var SCLpending = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.PendingTime) * (100 / SCLsum));
+    var SCLmaintenance = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.MaintenanceTime) * (100 / SCLsum));
+    var SCLpause = (SCLsum == 0) ? 0 : Math.round(@Html.Raw(Model.SCL.PauseTime) * (100 / SCLsum));
+
+        var chartSCL = new CanvasJS.Chart("pcSCL", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: SCLrunning, label: "Running" },
+                    { y: SCLtesting, label: "Testing" },
+                    { y: SCLother, label: "Other" },
+                    { y: SCLbreaktime, label: "Break" },
+                    { y: SCLfixing, label: "Fixing" },
+                    { y: SCLpending, label: "Pending" },
+                    { y: SCLmaintenance, label: "Maintenance" },
+                    { y: SCLpause, label: "Pause" }
+                ]
+            }]
+        });
+        chartSCL.render();
+
+        //GMC1
+        var GMC1sum = @Html.Raw(Model.GMC1.RunningTime) +
+              @Html.Raw(Model.GMC1.TestingTime) +
+              @Html.Raw(Model.GMC1.OtherTime) +
+              @Html.Raw(Model.GMC1.BreakTime) +
+              @Html.Raw(Model.GMC1.FixingTime) +
+              @Html.Raw(Model.GMC1.PendingTime) +
+              @Html.Raw(Model.GMC1.MaintenanceTime) +
+              @Html.Raw(Model.GMC1.PauseTime);
+    var GMC1running = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.RunningTime) * (100 / GMC1sum));
+    var GMC1testing = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.TestingTime) * (100 / GMC1sum));
+    var GMC1other = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.OtherTime) * (100 / GMC1sum));
+    var GMC1breaktime = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.BreakTime) * (100 / GMC1sum));
+    var GMC1fixing = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.FixingTime) * (100 / GMC1sum));
+    var GMC1pending = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.PendingTime) * (100 / GMC1sum));
+    var GMC1maintenance = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.MaintenanceTime) * (100 / GMC1sum));
+    var GMC1pause = (GMC1sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC1.PauseTime) * (100 / GMC1sum));
+
+        var chartGMC1 = new CanvasJS.Chart("pcGMC1", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: GMC1running, label: "Running" },
+                    { y: GMC1testing, label: "Testing" },
+                    { y: GMC1other, label: "Other" },
+                    { y: GMC1breaktime, label: "Break" },
+                    { y: GMC1fixing, label: "Fixing" },
+                    { y: GMC1pending, label: "Pending" },
+                    { y: GMC1maintenance, label: "Maintenance" },
+                    { y: GMC1pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartGMC1.render();
+
+        //GMC2
+        var GMC2sum = @Html.Raw(Model.GMC2.RunningTime) +
+              @Html.Raw(Model.GMC2.TestingTime) +
+              @Html.Raw(Model.GMC2.OtherTime) +
+              @Html.Raw(Model.GMC2.BreakTime) +
+              @Html.Raw(Model.GMC2.FixingTime) +
+              @Html.Raw(Model.GMC2.PendingTime) +
+              @Html.Raw(Model.GMC2.MaintenanceTime) +
+              @Html.Raw(Model.GMC2.PauseTime);
+    var GMC2running = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.RunningTime) * (100 / GMC2sum));
+    var GMC2testing = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.TestingTime) * (100 / GMC2sum));
+    var GMC2other = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.OtherTime) * (100 / GMC2sum));
+    var GMC2breaktime = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.BreakTime) * (100 / GMC2sum));
+    var GMC2fixing = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.FixingTime) * (100 / GMC2sum));
+    var GMC2pending = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.PendingTime) * (100 / GMC2sum));
+    var GMC2maintenance = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.MaintenanceTime) * (100 / GMC2sum));
+    var GMC2pause = (GMC2sum == 0) ? 0 : Math.round(@Html.Raw(Model.GMC2.PauseTime) * (100 / GMC2sum));
+
+        var chartGMC2 = new CanvasJS.Chart("pcGMC2", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: GMC2running, label: "Running" },
+                    { y: GMC2testing, label: "Testing" },
+                    { y: GMC2other, label: "Other" },
+                    { y: GMC2breaktime, label: "Break" },
+                    { y: GMC2fixing, label: "Fixing" },
+                    { y: GMC2pending, label: "Pending" },
+                    { y: GMC2maintenance, label: "Maintenance" },
+                    { y: GMC2pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartGMC2.render();
+
+        function explodePie(e) {
+            for (var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+                if (i !== e.dataPointIndex)
+                    e.dataSeries.dataPoints[i].exploded = false;
+            }
+        }
+    }</script>
+
+
+
+

@@ -1,0 +1,97 @@
+﻿@model VisingPackSolution.ViewModels.Event.MsPrintingVM
+@{
+    ViewData["Title"] = "Chart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@(Html.DevExtreme().Chart()
+        .ID("chart")
+        //.DataSource(d => d.OData()
+        //    .Url("https://js.devexpress.com/Demos/WidgetsGallery/odata/WeatherItems")
+        //    .Expand("DayItems")
+        //)
+        //.DataSourceOptions(o => o
+        //    .PostProcess("function(d) { return d[0].DayItems; }")
+        //    .Filter(@"[""Id"", ""="", 1]")
+        //)
+        .Title("Temperature in Barcelona, 2012")
+
+        .Series(s => s.Add()
+            .ArgumentField("Datetime")
+            .ValueField("Speed")
+            .Type(SeriesType.Spline)
+        )
+        .Legend(l => l.Visible(true))
+        .CommonPaneSettings(s => s
+            .Border(b => b
+                .Visible(true)
+                .Width(2)
+                .Top(false)
+                .Right(false)
+            )
+        )
+        .Size(s => s.Height(420).Width(1600))
+        //.ScrollBar(s => s.Visible(true).Width(1500))
+        .Export(e => e.Enabled(true))
+        .Tooltip(t => t
+            .Enabled(true)
+            .CustomizeTooltip(@<text>
+                    function(arg) {
+                        return {
+                            text: arg.valueText
+                        };
+                    }
+            </text>)
+        )
+        .ValueAxis(a => a
+            .Add()
+            .ValueType(ChartDataType.Numeric)
+            .Grid(g => g.Opacity(0.2))
+            .Label(l => l
+                .CustomizeText(@<text>
+                        function() {
+                            return this.valueText;
+                        }
+                </text>)
+            )
+        )
+        .ArgumentAxis(a => a
+            .Type(AxisScaleType.Discrete)
+            .Grid(g => g
+                .Visible(true)
+                .Opacity(0.5)
+            )
+        )
+        .LoadingIndicator(l => l.Enabled(true))
+        .ZoomAndPan(z => z.ArgumentAxis(ChartZoomAndPanMode.Both))
+        .DataSource(Model.P601Speeds)
+    )
+
+
+@*@(Html.DevExtreme().Chart()
+    .Title("Sales By Category/Year")
+    //.DataSource(d => d.WebApi().Controller("ChartsData").LoadAction("SalesByCategoryYear"))
+
+    .CommonSeriesSettings(s => s
+        .ArgumentField("Datetime")
+        .ValueField("Speed")
+        .Type(SeriesType.Spline)
+    )
+    //.SeriesTemplate(t => t.NameField("Year"))
+    //.Legend(l => l
+    //    .VerticalAlignment(VerticalEdge.Bottom)
+    //    .HorizontalAlignment(HorizontalAlignment.Center)
+    //)
+    //.ValueAxis(axisList =>
+    //    axisList.Add().Label(l => l.Format(Format.Currency))
+    //)
+    //.Size(s => s.Height(500))
+    ////.ZoomingMode(ChartManipulationMode.All)
+    //.Tooltip(t => t
+    //    .Enabled(true)
+    //    .Format(Format.Currency)
+    //    .Font(f => f.Size(16))
+    //)
+    .DataSource(Model.P601Speeds)
+)*@

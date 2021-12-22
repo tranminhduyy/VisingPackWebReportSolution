@@ -1,0 +1,330 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\VisingPack\\Web\\VisingPackSolution_v3\\Test\\Test.csproj": {}
+  },
+  "projects": {
+    "E:\\VisingPack\\Web\\VisingPackSolution_v3\\Test\\Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\Test\\Test.csproj",
+        "projectName": "Test",
+        "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Software\\D\\DevExpress\\Components\\Offline Packages",
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\VisingPack\\Web\\VisingPackSolution_v3\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Software\\D\\DevExpress\\Components\\System\\Components\\Packages": {},
+          "D:\\Software\\D\\DevExpress\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ApiIntegration\\VisingPackSolution.ApiIntegration.csproj": {
+                "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ApiIntegration\\VisingPackSolution.ApiIntegration.csproj"
+              },
+              "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj": {
+                "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj"
+              },
+              "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj": {
+                "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "BuildBundlerMinifier": {
+              "target": "Package",
+              "version": "[2.9.406, )"
+            },
+            "DevExtreme.AspNet.Core": {
+              "target": "Package",
+              "version": "[20.2.5, )"
+            },
+            "DevExtreme.AspNet.Data": {
+              "target": "Package",
+              "version": "[2.7.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.5.1, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.IdentityModel.Logging": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ApiIntegration\\VisingPackSolution.ApiIntegration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ApiIntegration\\VisingPackSolution.ApiIntegration.csproj",
+        "projectName": "VisingPackSolution.ApiIntegration",
+        "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ApiIntegration\\VisingPackSolution.ApiIntegration.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ApiIntegration\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Software\\D\\DevExpress\\Components\\Offline Packages",
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\VisingPack\\Web\\VisingPackSolution_v3\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Software\\D\\DevExpress\\Components\\System\\Components\\Packages": {},
+          "D:\\Software\\D\\DevExpress\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj": {
+                "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj"
+              },
+              "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj": {
+                "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj",
+        "projectName": "VisingPackSolution.ViewModels",
+        "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\VisingPackSolution.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolution.ViewModles\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Software\\D\\DevExpress\\Components\\Offline Packages",
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\VisingPack\\Web\\VisingPackSolution_v3\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Software\\D\\DevExpress\\Components\\System\\Components\\Packages": {},
+          "D:\\Software\\D\\DevExpress\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
+        "projectName": "VisingPackSolution.Utilities",
+        "projectPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
+        "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+        "outputPath": "E:\\VisingPack\\Web\\VisingPackSolution_v3\\VisingPackSolutions.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Software\\D\\DevExpress\\Components\\Offline Packages",
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "E:\\VisingPack\\Web\\VisingPackSolution_v3\\NuGet.Config",
+          "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Software\\D\\DevExpress\\Components\\System\\Components\\Packages": {},
+          "D:\\Software\\D\\DevExpress\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

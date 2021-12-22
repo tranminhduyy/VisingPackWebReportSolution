@@ -1,0 +1,160 @@
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution_v2\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar04\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar05\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.deps.json
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.dll
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.dll
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.ViewModels.pdb
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\VisingPackSolution.Utilities.pdb
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csprojAssemblyReference.cache
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfoInputs.cache
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.AssemblyInfo.cs
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CoreCompileInputs.cache
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.csproj.CopyComplete
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.dll
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.ApiIntegration\obj\Debug\netcoreapp3.1\VisingPackSolution.ApiIntegration.pdb

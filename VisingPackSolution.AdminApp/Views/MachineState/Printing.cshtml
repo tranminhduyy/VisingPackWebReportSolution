@@ -1,0 +1,399 @@
+﻿@model VisingPackSolution.ViewModels.MachineState.MsPrintingVM
+@{ ViewData["Title"] = "Machine State";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Machine State</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Printing 601 (Factory 2)
+                            </div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P601ProductCodeChangeCount prod code changes</div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P601JobCount pcs</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Printing 604 (Factory 1)
+                            </div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P604ProductCodeChangeCount prod code changes</div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P604JobCount pcs</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Printing 605 (Factory 1)
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P605ProductCodeChangeCount prod code changes</div>
+                                    <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P605JobCount pcs</div>
+                                </div>
+                                @*<div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>*@
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Printing 5M (Factory 1)
+                            </div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P5MProductCodeChangeCount prod code changes</div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.P5MJobCount pcs</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-action="Index" method="get" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataLastHour'" class="btn btn-dark" style="width: 110px">1 Hour</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataDay'" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataWeek'" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataMonth'" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/GetDataYear'" class="btn btn-dark" style="width: 110px">Year</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="margin-top: 6px">From</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" value="@ViewBag.From.ToString("yyyy-MM-dd")" name="From" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="margin-top: 6px">To</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" value="@ViewBag.To.ToString("yyyy-MM-dd")" name="To" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" class="btn btn-primary">Find</button>
+                    <button type="button" onclick="window.location.href='/MsPrinting/Index'" class="btn btn-dark">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Machine Speed</h6>
+        </div>
+        <div class="card-body" style="height:450px">
+            <div id="chartContainer" width="auto" height="100px"></div>            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-primary py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">P601</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 300px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Datetime
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.P601Events)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Datetime)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Event)
+                                        </td>
+                                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-success py-3">
+                    <h6 class="m-0 font-weight-bold text-success">P604</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 300px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Datetime
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.P604Events)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Datetime)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Event)
+                                        </td>
+                                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-info py-3">
+                    <h6 class="m-0 font-weight-bold text-info">P605</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 300px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Datetime
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.P605Events)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Datetime)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Event)
+                                        </td>
+                                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-warning py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">P5M</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 300px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Datetime
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.P5MEvents)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Datetime)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Event)
+                                        </td>
+                                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+        window.onload = function  () {
+            var p601Result = @Html.Raw(ViewBag.P601SpeedDataPoints);
+            var p604Result = @Html.Raw(ViewBag.P604SpeedDataPoints);
+            var p605Result = @Html.Raw(ViewBag.P605SpeedDataPoints);
+            var p5MResult = @Html.Raw(ViewBag.P5MSpeedDataPoints);
+
+            var p601SpeedDataPoints = [];
+            var p604SpeedDataPoints = [];
+            var p605SpeedDataPoints = [];
+            var p5MSpeedDataPoints = [];
+
+            for (var i = 0; i < p601Result.length; i++){
+                p601SpeedDataPoints.push({ label: p601Result[i].Datetime, y: p601Result[i].Speed });
+            }
+            for (var i = 0; i < p604Result.length; i++) {
+                p604SpeedDataPoints.push({ label: p604Result[i].Datetime, y: p604Result[i].Speed });
+            }
+            for (var i = 0; i < p605Result.length; i++) {
+                p605SpeedDataPoints.push({ label: p605Result[i].Datetime, y: p605Result[i].Speed });
+            }
+            for (var i = 0; i < p5MResult.length; i++) {
+                p5MSpeedDataPoints.push({ label: p5MResult[i].Datetime, y: p5MResult[i].Speed });
+            }
+
+            var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    animationEnabled: true,
+                    zoomEnabled: true,
+                    exportEnabled: true,
+                    zoomType: "xy",
+                    //title: {
+                    //    text: "Speed",
+                    //},
+                    axisY: {
+                        title: "pcs/h",
+                        gridThickness: 0.2,
+                    },
+                    legend: {
+                        horizontalAlign: "right",
+                        verticalAlign: "center",
+                        cursor: "pointer",
+                        itemclick: function (e) {
+                            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                                e.dataSeries.visible = false;
+                            } else {
+                                e.dataSeries.visible = true;
+                            }
+
+                            e.chart.render();
+                        },
+                    },
+                    data: [
+                        {
+                            type: "line",
+                            //lineColor: "#007BFF",
+                            //markerColor: "#007BFF",
+                            //legendMarkerColor: "#007BFF",
+                            xValueType: "dateTime",
+                            yValueFormatString: "#####.0",
+                            showInLegend: true,
+                            name: "P601",
+                            dataPoints: p601SpeedDataPoints
+                        },
+                        {
+                            type: "line",
+                            //lineColor: "#FFC107",
+                            //markerColor: "#FFC107",
+                            //legendMarkerColor: "#FFC107",
+                            xValueType: "dateTime",
+                            xValueFormatString: "dd/MM/yyyy",
+                            yValueFormatString: "#####.0",
+                            showInLegend: true,
+                            name: "P604",
+                            dataPoints: p604SpeedDataPoints
+                        },
+                        {
+                            type: "line",
+                            //lineColor: "#28A745",
+                            //markerColor: "#28A745",
+                            //legendMarkerColor: "#28A745",
+                            xValueType: "dateTime",
+                            xValueFormatString: "dd/MM/yyyy",
+                            yValueFormatString: "#####.0",
+                            showInLegend: true,
+                            name: "P605",
+                            dataPoints: p605SpeedDataPoints
+                        },
+                        {
+                            type: "line",
+                            //lineColor: "#DC3545",
+                            //markerColor: "#DC3545",
+                            //legendMarkerColor: "#DC3545",
+                            xValueType: "dateTime",
+                            xValueFormatString: "dd/MM/yyyy",
+                            yValueFormatString: "#####.0",
+                            showInLegend: true,
+                            name: "P5M",
+                            dataPoints: p5MSpeedDataPoints
+                        },
+                    ]
+
+                });
+
+            chart.render();
+        }
+
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+

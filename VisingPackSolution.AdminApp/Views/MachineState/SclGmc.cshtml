@@ -1,0 +1,333 @@
+﻿@model VisingPackSolution.ViewModels.MachineState.MsSclGmcVM
+@{ ViewData["Title"] = "Machine State";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Machine State</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                SCL (Factory 1)
+                            </div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.SclProductCodeChangeCount prod code changes</div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.SclJobCount pcs</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                GMC1 (Factory 1)
+                            </div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.Gmc1ProductCodeChangeCount prod code changes</div>
+                            <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.Gmc1JobCount pcs</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                GMC2 (Factory 1)
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.Gmc2ProductCodeChangeCount prod code changes</div>
+                                    <div class="h6 mb-0 font-weight-bold text-gray-800">@Model.Gmc2JobCount pcs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-action="Index" method="get" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="button" onclick="window.location.href='/MsSclGmc/GetDataLastHour'" class="btn btn-dark" style="width: 110px">1 Hour</button>
+                    <button type="button" onclick="window.location.href='/MsSclGmc/GetDataDay'" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="button" onclick="window.location.href='/MsSclGmc/GetDataWeek'" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="button" onclick="window.location.href='/MsSclGmc/GetDataMonth'" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="button" onclick="window.location.href='/MsSclGmc/GetDataYear'" class="btn btn-dark" style="width: 110px">Year</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="margin-top: 6px">From</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" value="@ViewBag.From.ToString("yyyy-MM-dd")" name="From" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="margin-top: 6px">To</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" value="@ViewBag.To.ToString("yyyy-MM-dd")" name="To" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" class="btn btn-primary">Find</button>
+                    <button type="button" onclick="window.location.href='/MsSclGmc/Index'" class="btn btn-dark">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Machine Speed</h6>
+        </div>
+        <div class="card-body" style="height:450px">
+            <div id="chartContainer" width="auto" height="100px"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-primary py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">SCL</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 300px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Datetime
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.SclEvents)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Datetime)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Event)
+                                        </td>
+                                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-success py-3">
+                    <h6 class="m-0 font-weight-bold text-success">GMC1</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 300px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Datetime
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Gmc1Events)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Datetime)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Event)
+                                        </td>
+                                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-info py-3">
+                    <h6 class="m-0 font-weight-bold text-info">GMC2</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="height: 300px; overflow: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Datetime
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Gmc2Events)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Datetime)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Event)
+                                        </td>
+                                    </tr>}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+        window.onload = function  () {
+            var sclResult = @Html.Raw(ViewBag.SclSpeedDataPoints);
+            var gmc1Result = @Html.Raw(ViewBag.Gmc1SpeedDataPoints);
+            var gmc2Result = @Html.Raw(ViewBag.Gmc2SpeedDataPoints);
+
+            var sclSpeedDataPoints = [];
+            var gmc1SpeedDataPoints = [];
+            var gmc2SpeedDataPoints = [];
+
+            for (var i = 0; i < sclResult.length; i++){
+                sclSpeedDataPoints.push({ label: sclResult[i].Datetime, y: sclResult[i].Speed });
+            }
+            for (var i = 0; i < gmc1Result.length; i++) {
+                gmc1SpeedDataPoints.push({ label: gmc1Result[i].Datetime, y: gmc1Result[i].Speed });
+            }
+            for (var i = 0; i < gmc2Result.length; i++) {
+                gmc2SpeedDataPoints.push({ label: gmc2Result[i].Datetime, y: gmc2Result[i].Speed });
+            }
+
+            var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    animationEnabled: true,
+                    zoomEnabled: true,
+                    exportEnabled: true,
+                    zoomType: "xy",
+                    //title: {
+                    //    text: "Speed",
+                    //},
+                    axisY: {
+                        title: "pcs/h",
+                        gridThickness: 0.2,
+                    },
+                    legend: {
+                        horizontalAlign: "right",
+                        verticalAlign: "center",
+                        cursor: "pointer",
+                        itemclick: function (e) {
+                            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                                e.dataSeries.visible = false;
+                            } else {
+                                e.dataSeries.visible = true;
+                            }
+
+                            e.chart.render();
+                        },
+                    },
+                    data: [
+                        {
+                            type: "line",
+                            //lineColor: "#007BFF",
+                            //markerColor: "#007BFF",
+                            //legendMarkerColor: "#007BFF",
+                            xValueType: "dateTime",
+                            yValueFormatString: "#####.0",
+                            showInLegend: true,
+                            name: "SCL",
+                            dataPoints: sclSpeedDataPoints
+                        },
+                        {
+                            type: "line",
+                            //lineColor: "#FFC107",
+                            //markerColor: "#FFC107",
+                            //legendMarkerColor: "#FFC107",
+                            xValueType: "dateTime",
+                            xValueFormatString: "dd/MM/yyyy",
+                            yValueFormatString: "#####.0",
+                            showInLegend: true,
+                            name: "GMC1",
+                            dataPoints: gmc1SpeedDataPoints
+                        },
+                        {
+                            type: "line",
+                            //lineColor: "#28A745",
+                            //markerColor: "#28A745",
+                            //legendMarkerColor: "#28A745",
+                            xValueType: "dateTime",
+                            xValueFormatString: "dd/MM/yyyy",
+                            yValueFormatString: "#####.0",
+                            showInLegend: true,
+                            name: "GMC2",
+                            dataPoints: gmc2SpeedDataPoints
+                        },                       
+                    ]
+
+                });
+
+            chart.render();
+        }
+
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
+
+
+
+

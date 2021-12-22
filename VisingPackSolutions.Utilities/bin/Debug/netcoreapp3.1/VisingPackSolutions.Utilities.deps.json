@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "VisingPackSolutions.Utilities/1.0.0": {
+        "runtime": {
+          "VisingPackSolutions.Utilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VisingPackSolutions.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

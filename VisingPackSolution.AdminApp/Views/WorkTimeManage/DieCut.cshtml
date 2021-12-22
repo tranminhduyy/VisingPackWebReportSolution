@@ -1,0 +1,489 @@
+﻿@model VisingPackSolution.ViewModels.WorkTimeManage.WtDieCutVM
+@{ ViewData["Title"] = "Ope. Time Management";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+
+<div class="container-fluid">
+    <h1 class="mt-4">Ope. Time Management</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row" style="margin: 0px 0px 20px 10px">
+        <form asp-controller="WtDieCut" asp-action="GetData" method="post" style="width: 1000px">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0px 0px 10px -10px">
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark" style="width: 110px">Day</button>
+                    <button type="submit" value="Week" name="Selected" class="btn btn-dark" style="width: 110px">Week</button>
+                    <button type="submit" value="Month" name="Selected" class="btn btn-dark" style="width: 110px">Month</button>
+                    <button type="submit" value="3Month" name="Selected" class="btn btn-dark" style="width: 110px">3 Months</button>
+                    <button type="submit" value="6Month" name="Selected" class="btn btn-dark" style="width: 110px">6 Months</button>
+                    <button type="submit" value="Year" name="Selected" class="btn btn-dark" style="width: 110px">Year</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="margin-left: -10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="margin-top: 6px">From</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="From" value="@ViewBag.From.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label style="margin-top: 6px">To</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="date" name="To" value="@ViewBag.To.ToString("yyyy-MM-dd")" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cold-md-3">
+                    <button type="submit" value="Find" name="Selected" class="btn btn-primary">Find</button>
+                    <button type="submit" value="Day" name="Selected" class="btn btn-dark">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Die cut BTD2 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.BTD2RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: @ViewBag.BTD2RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Die cut BTD3 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.BTD3RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: @ViewBag.BTD3RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Die cut BTD4 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.BTD4RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: @ViewBag.BTD4RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Die cut BTD5 (Factory 2)
+                            </div>
+                            <div class="text-xs font-weight-bold text-gray-800 text-uppercase mb-1">
+                                Running / Total
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.BTD5RunPercent%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: @ViewBag.BTD5RunPercent%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-primary py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">BTD2</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcBTD2" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-success py-3">
+                    <h6 class="m-0 font-weight-bold text-success">BTD3</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcBTD3" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-info py-3">
+                    <h6 class="m-0 font-weight-bold text-info">BTD4</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcBTD4" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="card shadow mb-4">
+                <div class="card-header border-bottom-warning py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">BTD5</h6>
+                </div>
+                <div class="card-body">
+                    <div id="pcBTD5" style="height: 250px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow border-left-danger mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Machine Ope. Time</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_desc text-danger" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Avaibility: activate to sort column ascending" style="width: auto;" aria-sort="descending">Avaibility (h)</th>
+                                        <th class="sorting text-primary" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD2</th>
+                                        <th class="sorting text-success" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD3</th>
+                                        <th class="sorting text-info" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD4</th>
+                                        <th class="sorting text-warning" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: auto;">BTD5</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Running time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.RunningTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.RunningTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Testing time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.TestingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.TestingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.OtherTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.OtherTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Break time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.BreakTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.BreakTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fixing time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.FixingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.FixingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pending time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.PendingTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.PendingTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.MaintenanceTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.MaintenanceTime)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pause time</td>
+                                        <td>@Convert.ToDecimal(Model.BTD2.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD3.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD4.PauseTime)</td>
+                                        <td>@Convert.ToDecimal(Model.BTD5.PauseTime)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+window.onload = function () {
+        //BTD2
+        var btd2sum = @Html.Raw(Model.BTD2.RunningTime) +
+              @Html.Raw(Model.BTD2.TestingTime) +
+              @Html.Raw(Model.BTD2.OtherTime) +
+              @Html.Raw(Model.BTD2.BreakTime) +
+              @Html.Raw(Model.BTD2.FixingTime) +
+              @Html.Raw(Model.BTD2.PendingTime) +
+              @Html.Raw(Model.BTD2.MaintenanceTime) +
+              @Html.Raw(Model.BTD2.PauseTime);
+    var btd2running = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.RunningTime) * (100 / btd2sum));
+    var btd2testing = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.TestingTime) * (100 / btd2sum));
+    var btd2other = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.OtherTime) * (100 / btd2sum));
+    var btd2breaktime = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.BreakTime) * (100 / btd2sum));
+    var btd2fixing = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.FixingTime) * (100 / btd2sum));
+    var btd2pending = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.PendingTime) * (100 / btd2sum));
+    var btd2maintenance = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.MaintenanceTime) * (100 / btd2sum));
+    var btd2pause = (btd2sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD2.PauseTime) * (100 / btd2sum));
+
+        var chartBTD2 = new CanvasJS.Chart("pcBTD2", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: btd2running, label: "Running" },
+                    { y: btd2testing, label: "Testing" },
+                    { y: btd2other, label: "Other" },
+                    { y: btd2breaktime, label: "Break" },
+                    { y: btd2fixing, label: "Fixing" },
+                    { y: btd2pending, label: "Pending" },
+                    { y: btd2maintenance, label: "Maintenance" },
+                    { y: btd2pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartBTD2.render();
+
+        //BTD3
+        var BTD3sum = @Html.Raw(Model.BTD3.RunningTime) +
+              @Html.Raw(Model.BTD3.TestingTime) +
+              @Html.Raw(Model.BTD3.OtherTime) +
+              @Html.Raw(Model.BTD3.BreakTime) +
+              @Html.Raw(Model.BTD3.FixingTime) +
+              @Html.Raw(Model.BTD3.PendingTime) +
+              @Html.Raw(Model.BTD3.MaintenanceTime) +
+              @Html.Raw(Model.BTD3.PauseTime);
+    var BTD3running = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.RunningTime) * (100 / BTD3sum));
+    var BTD3testing = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.TestingTime) * (100 / BTD3sum));
+    var BTD3other = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.OtherTime) * (100 / BTD3sum));
+    var BTD3breaktime = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.BreakTime) * (100 / BTD3sum));
+    var BTD3fixing = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.FixingTime) * (100 / BTD3sum));
+    var BTD3pending = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.PendingTime) * (100 / BTD3sum));
+    var BTD3maintenance = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.MaintenanceTime) * (100 / BTD3sum));
+    var BTD3pause = (BTD3sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD3.PauseTime) * (100 / BTD3sum));
+
+        var chartBTD3 = new CanvasJS.Chart("pcBTD3", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: BTD3running, label: "Running" },
+                    { y: BTD3testing, label: "Testing" },
+                    { y: BTD3other, label: "Other" },
+                    { y: BTD3breaktime, label: "Break" },
+                    { y: BTD3fixing, label: "Fixing" },
+                    { y: BTD3pending, label: "Pending" },
+                    { y: BTD3maintenance, label: "Maintenance" },
+                    { y: BTD3pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartBTD3.render();
+
+        //BTD4
+        var BTD4sum = @Html.Raw(Model.BTD4.RunningTime) +
+              @Html.Raw(Model.BTD4.TestingTime) +
+              @Html.Raw(Model.BTD4.OtherTime) +
+              @Html.Raw(Model.BTD4.BreakTime) +
+              @Html.Raw(Model.BTD4.FixingTime) +
+              @Html.Raw(Model.BTD4.PendingTime) +
+              @Html.Raw(Model.BTD4.MaintenanceTime) +
+              @Html.Raw(Model.BTD4.PauseTime);
+    var BTD4running = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.RunningTime) * (100 / BTD4sum));
+    var BTD4testing = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.TestingTime) * (100 / BTD4sum));
+    var BTD4other = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.OtherTime) * (100 / BTD4sum));
+    var BTD4breaktime = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.BreakTime) * (100 / BTD4sum));
+    var BTD4fixing = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.FixingTime) * (100 / BTD4sum));
+    var BTD4pending = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.PendingTime) * (100 / BTD4sum));
+    var BTD4maintenance = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.MaintenanceTime) * (100 / BTD4sum));
+    var BTD4pause = (BTD4sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD4.PauseTime) * (100 / BTD4sum));
+
+        var chartBTD4 = new CanvasJS.Chart("pcBTD4", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: BTD4running, label: "Running" },
+                    { y: BTD4testing, label: "Testing" },
+                    { y: BTD4other, label: "Other" },
+                    { y: BTD4breaktime, label: "Break" },
+                    { y: BTD4fixing, label: "Fixing" },
+                    { y: BTD4pending, label: "Pending" },
+                    { y: BTD4maintenance, label: "Maintenance" },
+                    { y: BTD4pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartBTD4.render();
+
+
+
+        //BTD5
+    var BTD5sum = @Html.Raw(Model.BTD5.RunningTime) +
+              @Html.Raw(Model.BTD5.TestingTime) +
+              @Html.Raw(Model.BTD5.OtherTime) +
+              @Html.Raw(Model.BTD5.BreakTime) +
+              @Html.Raw(Model.BTD5.FixingTime) +
+              @Html.Raw(Model.BTD5.PendingTime) +
+              @Html.Raw(Model.BTD5.MaintenanceTime) +
+              @Html.Raw(Model.BTD5.PauseTime);
+    var BTD5running = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.RunningTime) * (100 / BTD5sum));
+    var BTD5testing = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.TestingTime) * (100 / BTD5sum));
+    var BTD5other = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.OtherTime) * (100 / BTD5sum));
+    var BTD5breaktime = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.BreakTime) * (100 / BTD5sum));
+    var BTD5fixing = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.FixingTime) * (100 / BTD5sum));
+    var BTD5pending = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.PendingTime) * (100 / BTD5sum));
+    var BTD5maintenance = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.MaintenanceTime) * (100 / BTD5sum));
+    var BTD5pause = (BTD5sum == 0) ? 0 : Math.round(@Html.Raw(Model.BTD5.PauseTime) * (100 / BTD5sum));
+
+        var chartBTD5 = new CanvasJS.Chart("pcBTD5", {
+            theme: "light2",
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                indexLabelFontSize: 15,
+                radius: 80,
+                indexLabel: "{label} - {y}",
+                yValueFormatString: "###0\"%\"",
+                click: explodePie,
+                dataPoints: [
+                    { y: BTD5running, label: "Running" },
+                    { y: BTD5testing, label: "Testing" },
+                    { y: BTD5other, label: "Other" },
+                    { y: BTD5breaktime, label: "Break" },
+                    { y: BTD5fixing, label: "Fixing" },
+                    { y: BTD5pending, label: "Pending" },
+                    { y: BTD5maintenance, label: "Maintenance" },
+                    { y: BTD5pause, label: "Pause" }
+                ]
+            }]
+        });
+        chartBTD5.render();
+
+        function explodePie(e) {
+            for (var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+                if (i !== e.dataPointIndex)
+                    e.dataSeries.dataPoints[i].exploded = false;
+            }
+        }
+    }</script>
+
+
+
+

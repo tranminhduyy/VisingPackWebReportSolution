@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "caYj+yj1rMyMyAvTZuxq6UZlhVNc+kdocnyJ8JttUHiEW05b79JH8f3ky3ZXN9qo8EjIvQYkAasVm6oaY4+qcg==",
+  "success": true,
+  "projectFilePath": "E:\\Private\\Quit\\01. VisingPack\\04. Web Report\\VisingPackSolution_21Mar09_RoleAssignOK\\VisingPackSolution.ApiIntegration\\VisingPackSolution.ApiIntegration.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Minh Di\\.nuget\\packages\\fluentvalidation\\9.5.0\\fluentvalidation.9.5.0.nupkg.sha512",
+    "C:\\Users\\Minh Di\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.5.0\\fluentvalidation.aspnetcore.9.5.0.nupkg.sha512",
+    "C:\\Users\\Minh Di\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.5.0\\fluentvalidation.dependencyinjectionextensions.9.5.0.nupkg.sha512",
+    "C:\\Users\\Minh Di\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

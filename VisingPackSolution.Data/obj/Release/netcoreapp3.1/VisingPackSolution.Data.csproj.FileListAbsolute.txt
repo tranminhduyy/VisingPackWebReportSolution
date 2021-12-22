@@ -1,0 +1,71 @@
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.deps.json
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.json
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.dev.json
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfoInputs.cache
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfo.cs
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\VisingPackSolution_v3\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.genruntimeconfig.cache
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.deps.json
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.json
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.dev.json
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csprojAssemblyReference.cache
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfoInputs.cache
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfo.cs
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\VisingPackSolution_21Feb26\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.genruntimeconfig.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.dev.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar01\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.genruntimeconfig.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.dev.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar06\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.genruntimeconfig.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.deps.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.dev.json
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csprojAssemblyReference.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfoInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfo.cs
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csproj.CoreCompileInputs.cache
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\VisingPack\Web\Develoment\VisingPackSolution_21Mar09\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.genruntimeconfig.cache
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.deps.json
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.json
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.runtimeconfig.dev.json
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\bin\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csprojAssemblyReference.cache
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfoInputs.cache
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.AssemblyInfo.cs
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.csproj.CoreCompileInputs.cache
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.dll
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.pdb
+E:\Private\Quit\01. VisingPack\04. Web Report\VisingPackSolution_21Mar09_RoleAssignOK\VisingPackSolution.Data\obj\Release\netcoreapp3.1\VisingPackSolution.Data.genruntimeconfig.cache
