@@ -183,9 +183,10 @@ namespace VisingPackSolution.Application.ProductionTracking
         public async Task<PtWeekVM> GetP601ProductionTracking_Week(TimeRequest request)
         {
             var query1 = from p in _context.TableDays
-                         select new { p };
-            query1 = query1.Where(w => w.p.Date >= request.From && w.p.Date <= request.To);
-            if (!query1.Any())
+                         select new { p };  //query từ bảng "TableDays"
+            query1 = query1.Where(w => w.p.Date >= request.From && w.p.Date <= request.To); //filter theo thoi gian : from -> to
+          
+            if (!query1.Any())  //nếu query rỗng -> trả về model rỗng
             {
                 var empty = new WorkTimeVM() { RunningTime = 0, TestingTime = 0, OtherTime = 0, BreakTime = 0, FixingTime = 0, PendingTime = 0, MaintenanceTime = 0, PauseTime = 0 };
                 return new PtWeekVM()
@@ -203,45 +204,45 @@ namespace VisingPackSolution.Application.ProductionTracking
                 };
             }
 
-            var wtVM = query1.Where(w => w.p.Machine == "P601")
-            .GroupBy(g => g.p.Machine)
+            var wtVM = query1.Where(w => w.p.Machine == "P601") //filter: theo machine
+            .GroupBy(g => g.p.Machine)//nhóm theo field machine
             .Select(s => new WorkTimeVM()
             {
-                RunningTime = (s.Sum(a => a.p.RunningTime) == null) ? 0 : s.Sum(a => a.p.RunningTime),
-                TestingTime = (s.Sum(a => a.p.TestingTime) == null) ? 0 : s.Sum(a => a.p.TestingTime),
-                OtherTime = (s.Sum(a => a.p.OtherTime) == null) ? 0 : s.Sum(a => a.p.OtherTime),
-                BreakTime = (s.Sum(a => a.p.BreakTime) == null) ? 0 : s.Sum(a => a.p.BreakTime),
-                FixingTime = (s.Sum(a => a.p.FixingTime) == null) ? 0 : s.Sum(a => a.p.FixingTime),
-                PendingTime = (s.Sum(a => a.p.PendingTime) == null) ? 0 : s.Sum(a => a.p.PendingTime),
-                MaintenanceTime = (s.Sum(a => a.p.MaintenanceTime) == null) ? 0 : s.Sum(a => a.p.MaintenanceTime),
-                PauseTime = (s.Sum(a => a.p.PauseTime) == null) ? 0 : s.Sum(a => a.p.PauseTime),
-            }).FirstOrDefault();
+                RunningTime = (s.Sum(a => a.p.RunningTime) == null) ? 0 : s.Sum(a => a.p.RunningTime),  //tính tổng thời gian máy chạy: nếu select sum = null -> tổng = 0
+                TestingTime = (s.Sum(a => a.p.TestingTime) == null) ? 0 : s.Sum(a => a.p.TestingTime),  //tính tổng thời gian testing: nếu select sum = null -> tổng = 0
+                OtherTime = (s.Sum(a => a.p.OtherTime) == null) ? 0 : s.Sum(a => a.p.OtherTime),        //tính tổng thời gian ở trạng thái khác: nếu select sum = null -> tổng = 0
+                BreakTime = (s.Sum(a => a.p.BreakTime) == null) ? 0 : s.Sum(a => a.p.BreakTime),        //tính tổng thời gian máy ở trạng thái nghỉ: nếu select sum = null -> tổng = 0
+                FixingTime = (s.Sum(a => a.p.FixingTime) == null) ? 0 : s.Sum(a => a.p.FixingTime),     //tính tổng thời gian máy đang sửa chữa: nếu select sum = null -> tổng = 0
+                PendingTime = (s.Sum(a => a.p.PendingTime) == null) ? 0 : s.Sum(a => a.p.PendingTime),  //tính tổng thời gian máy dừng: nếu select sum = null -> tổng = 0
+                MaintenanceTime = (s.Sum(a => a.p.MaintenanceTime) == null) ? 0 : s.Sum(a => a.p.MaintenanceTime),  //tính tổng thời gian máy đang bảo trì: nếu select sum = null -> tổng = 0
+                PauseTime = (s.Sum(a => a.p.PauseTime) == null) ? 0 : s.Sum(a => a.p.PauseTime),        //tính tổng thời gian máy dừng: nếu select sum = null -> tổng = 0
+            }).FirstOrDefault();//lấy giá trị đầu tiên
 
             var query2 = (from a in _context.P601PoKpis
                           join b in _context.P601PoInfos on a.Ws equals b.Ws
                           where a.Starttime >= request.From && a.Starttime <= request.To && a.Ws != ""
-                          select new { a, b });
+                          select new { a, b }); //join 2 bảng P601PoKpis, P601PoInfos điều kiện cùng tên WS -> filter: thời gian
 
 
 
-            var totalTime = (wtVM is null) ? 0 : wtVM.TestingTime + wtVM.RunningTime + wtVM.OtherTime + wtVM.BreakTime + wtVM.FixingTime + wtVM.PendingTime + wtVM.MaintenanceTime + wtVM.PauseTime;
-            var notRunningTime = (wtVM is null) ? 0 : wtVM.OtherTime + wtVM.BreakTime + wtVM.FixingTime + wtVM.PendingTime + wtVM.MaintenanceTime + wtVM.PauseTime;
-            var productCodeChange = await query2.Select(x => x.b.Product).Distinct().CountAsync();
-            var quantity = await query2.Select(x => x.a.Job).SumAsync();
-            var waste = await query2.Select(x => x.a.DefeatItem1 + x.a.DefeatItem2 + x.a.DefeatItem3 + x.a.DefeatItem4).SumAsync();
+            var totalTime = (wtVM is null) ? 0 : wtVM.TestingTime + wtVM.RunningTime + wtVM.OtherTime + wtVM.BreakTime + wtVM.FixingTime + wtVM.PendingTime + wtVM.MaintenanceTime + wtVM.PauseTime;    //tính tổng thời gian
+            var notRunningTime = (wtVM is null) ? 0 : wtVM.OtherTime + wtVM.BreakTime + wtVM.FixingTime + wtVM.PendingTime + wtVM.MaintenanceTime + wtVM.PauseTime; //tính tổng thời gian máy ko chạy
+            var productCodeChange = await query2.Select(x => x.b.Product).Distinct().CountAsync();  //tính số lần thay đổi ProductCode
+            var quantity = await query2.Select(x => x.a.Job).SumAsync();    //tính tổng sản phẩm
+            var waste = await query2.Select(x => x.a.DefeatItem1 + x.a.DefeatItem2 + x.a.DefeatItem3 + x.a.DefeatItem4).SumAsync(); //tính tổng phế phẩm
 
             var data = new PtWeekVM()
             {
-                TestingTime = (wtVM is null) ? 0 : wtVM.TestingTime,
-                RunningTime = (wtVM is null) ? 0 : wtVM.RunningTime,
-                NotRunningTime = notRunningTime,
-                TotalTime = totalTime,
-                TestingTimeAndPercent = (wtVM is null || totalTime == 0) ? "0h 0%" : Math.Round((decimal)wtVM.TestingTime, 1).ToString() + "h " + Math.Round((decimal)(wtVM.TestingTime * 100 / totalTime), 1).ToString() + "%",
-                RunningTimeAndPercent = (wtVM is null || totalTime == 0) ? "0h 0%" : Math.Round((decimal)wtVM.RunningTime, 1).ToString() + "h " + Math.Round((decimal)(wtVM.RunningTime * 100 / totalTime), 1).ToString() + "%",
-                NotRunningTimeAndPercent = (totalTime == 0) ? "0h 0%" : Math.Round((decimal)notRunningTime, 1).ToString() + "h " + Math.Round((decimal)(notRunningTime * 100 / totalTime), 1).ToString() + "%",
-                ProductCodeChangeCount = productCodeChange,
-                Quantity = quantity,
-                Waste = waste,
+                TestingTime = (wtVM is null) ? 0 : wtVM.TestingTime,//thời gian test
+                RunningTime = (wtVM is null) ? 0 : wtVM.RunningTime,//thời gian chạy
+                NotRunningTime = notRunningTime,//thời gian ko chạy
+                TotalTime = totalTime,//tổng thời gian
+                TestingTimeAndPercent = (wtVM is null || totalTime == 0) ? "0h 0%" : Math.Round((decimal)wtVM.TestingTime, 1).ToString() + "h " + Math.Round((decimal)(wtVM.TestingTime * 100 / totalTime), 1).ToString() + "%",//%
+                RunningTimeAndPercent = (wtVM is null || totalTime == 0) ? "0h 0%" : Math.Round((decimal)wtVM.RunningTime, 1).ToString() + "h " + Math.Round((decimal)(wtVM.RunningTime * 100 / totalTime), 1).ToString() + "%",//%
+                NotRunningTimeAndPercent = (totalTime == 0) ? "0h 0%" : Math.Round((decimal)notRunningTime, 1).ToString() + "h " + Math.Round((decimal)(notRunningTime * 100 / totalTime), 1).ToString() + "%",//%
+                ProductCodeChangeCount = productCodeChange,//số lần thay đổi ProductCode
+                Quantity = quantity,//tổng sản phẩm
+                Waste = waste,//tổng phế phẩm
             };
 
             return data;

@@ -8,20 +8,20 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\TruongTran\\.nuget\\packages\\": {}
+    "C:\\Users\\Minh Di\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TruongTran\\Công ty TNHH Hệ Thống Tự Động Đại Dương Mới\\Vising Pack - IIOT - Software Team - Software Team\\WebReport\\VisingPackSolution_211006\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
+      "projectUniqueName": "D:\\Private\\Repos\\vsp-web-report\\VisingPackWebReportSolution\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
       "projectName": "VisingPackSolution.Utilities",
-      "projectPath": "C:\\Users\\TruongTran\\Công ty TNHH Hệ Thống Tự Động Đại Dương Mới\\Vising Pack - IIOT - Software Team - Software Team\\WebReport\\VisingPackSolution_211006\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
-      "packagesPath": "C:\\Users\\TruongTran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TruongTran\\Công ty TNHH Hệ Thống Tự Động Đại Dương Mới\\Vising Pack - IIOT - Software Team - Software Team\\WebReport\\VisingPackSolution_211006\\VisingPackSolutions.Utilities\\obj\\",
+      "projectPath": "D:\\Private\\Repos\\vsp-web-report\\VisingPackWebReportSolution\\VisingPackSolutions.Utilities\\VisingPackSolution.Utilities.csproj",
+      "packagesPath": "C:\\Users\\Minh Di\\.nuget\\packages\\",
+      "outputPath": "D:\\Private\\Repos\\vsp-web-report\\VisingPackWebReportSolution\\VisingPackSolutions.Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TruongTran\\Công ty TNHH Hệ Thống Tự Động Đại Dương Mới\\Vising Pack - IIOT - Software Team - Software Team\\WebReport\\VisingPackSolution_211006\\NuGet.Config",
-        "C:\\Users\\TruongTran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\Private\\Repos\\vsp-web-report\\VisingPackWebReportSolution\\NuGet.Config",
+        "C:\\Users\\Minh Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -29,6 +29,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\Minh Di\\.nuget\\packages": {},
+        "D:\\Private\\Repos\\net-core-platform-cnv\\Libs": {},
+        "D:\\Project\\CNV\\Repos\\net-core-platform-cnv\\antifacts\\booking-shared": {},
         "D:\\Software\\D\\DevExpress\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -62,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
       }
     }
   }
